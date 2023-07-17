@@ -1,2 +1,2 @@
-const String kBaseUrl = "https://ccypapi.quyooo.com";
-const String kToken = "";
+const String kBaseUrl = "";
+String httpAuthorizationToken = "";

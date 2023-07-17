@@ -7,7 +7,7 @@ import '../widgets/toast/toast.dart';
 class HttpInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    options.headers["Authorization"] = "Bearer $kToken";
+    options.headers["Authorization"] = "Bearer $httpAuthorizationToken";
     log("Request", "Response Start", level: LogLevel.success);
     log("Request", "RequestUrl: ${options.baseUrl}${options.path}", level: LogLevel.info);
     log("Request", "RequestHeaders: ${options.headers}", level: LogLevel.info);

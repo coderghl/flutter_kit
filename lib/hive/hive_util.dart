@@ -7,6 +7,6 @@ class HiveUtil {
 
   static Future<void> init() async {
     await Hive.initFlutter();
-    appBox = await Hive.openBox(kAppBox);
+    appBox = await Hive.openBox(kAppBoxKey);
   }
 }

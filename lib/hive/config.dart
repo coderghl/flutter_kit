@@ -1,1 +1,2 @@
-const String kAppBox = "appBox";
+const String kAppBoxKey = "appBox";
+const String kTokenKey = "token";

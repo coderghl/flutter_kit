@@ -5,5 +5,4 @@ import 'http/http.dart';
 Future<void> initKit() async {
   await HiveUtil.init();
   await Http.init(root: kBaseUrl);
-  // await NotifierUtil.init();
 }

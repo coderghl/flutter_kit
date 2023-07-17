@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_kit/http/config.dart';
 
 import '../log/log.dart';
 import '../widgets/toast/toast.dart';
@@ -6,8 +7,10 @@ import '../widgets/toast/toast.dart';
 class HttpInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    options.headers["Authorization"] = "Bearer $kToken";
     log("Request", "Response Start", level: LogLevel.success);
     log("Request", "RequestUrl: ${options.baseUrl}${options.path}", level: LogLevel.info);
+    log("Request", "RequestHeaders: ${options.headers}", level: LogLevel.info);
     log("Request", "RequestMethod: ${options.method}", level: LogLevel.info);
     log("Request", "RequestData: ${options.data}", level: LogLevel.info);
     log("Request", "RequestQueryParameters: ${options.queryParameters}", level: LogLevel.info);
